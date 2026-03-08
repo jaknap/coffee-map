@@ -36,3 +36,40 @@
     transform: rotate(360deg);
   }
 }
+
+/* Coffee cup icon animation */
+.coffee-cup-icon {
+  background: transparent !important;
+  border: none !important;
+}
+
+.coffee-cup-icon img {
+  display: none !important;
+}
+
+.coffee-cup-inner {
+  font-size: 40px;
+  line-height: 1;
+  animation: coffee-bounce 1s ease-in-out infinite;
+  filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.3));
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes coffee-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* Make the coffee cup marker transition smoothly */
+.coffee-cup-icon.leaflet-marker-icon {
+  transition: all 1.5s ease-in-out;
+}
